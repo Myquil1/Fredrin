@@ -4,13 +4,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: var(--sp-32);
-}
-
-.principle-number {
-  font-family: var(--font-mono);
-  font-size: var(--fs-13);
-  color: var(--muted);
-  margin-bottom: var(--sp-8);
+  max-width: var(--measure);
 }
 
 .principles-list h3 {
@@ -22,4 +16,21 @@
 .principle-support {
   font-size: var(--fs-17);
   margin-top: var(--sp-8);
+}
+
+@media (min-width: 900px) {
+  .principles-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--sp-32);
+    max-width: none;
+  }
+
+  .principles-list li {
+    border-top: 1px solid var(--border);
+    padding-top: var(--sp-16);
+  }
+
+  .principle-support {
+    font-size: var(--fs-15);
+  }
 }

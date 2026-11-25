@@ -6,6 +6,12 @@
   <title>Michael Wilson for Fredrin</title>
   <meta name="description" content="Michael Wilson is a product designer applying for the UI/UX designer role at Fredrin. Six years across AI review flows, data tables, and design systems.">
   <meta name="robots" content="noindex">
+  <meta property="og:title" content="Michael Wilson for Fredrin">
+  <meta property="og:description" content="Michael Wilson is a product designer applying for the UI/UX designer role at Fredrin. Six years across AI review flows, data tables, and design systems.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://michaelawilson.co/og-home.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="https://michaelawilson.co/favicon.svg">
   <meta name="color-scheme" content="dark light">
   <meta name="theme-color" content="#0E0E0C" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#FAF7F2" media="(prefers-color-scheme: light)">
@@ -15,6 +21,7 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/hero.css">
   <link rel="stylesheet" href="css/proof.css">
+  <link rel="stylesheet" href="css/board.css">
   <link rel="stylesheet" href="css/work.css">
   <link rel="stylesheet" href="css/principles.css">
   <link rel="stylesheet" href="css/notes.css">
@@ -51,10 +58,231 @@
         </li>
       </ul>
     </section>
+    <section id="board" aria-labelledby="board-heading">
+      <h2 id="board-heading">The board at twenty tickets, sketched in code</h2>
+      <p class="board-intro">Your posting asks for twenty agents that feel as calm as one. This is my first pass at that, built on this page with sample data. A row that is fine stays quiet. A row that needs you says why and puts the next step where you can click it. Try clearing the three that need you.</p>
+      <div class="board" id="board-panel">
+        <div class="board-bar">
+          <p class="board-summary" id="board-summary" role="status" aria-live="polite">3 need you. 13 in progress. 4 done.</p>
+          <fieldset class="board-filter">
+            <legend class="visually-hidden">Show</legend>
+            <label><input class="visually-hidden" type="radio" name="board-filter" value="all" checked><span>All <span class="n" data-count="all">20</span></span></label>
+            <label><input class="visually-hidden" type="radio" name="board-filter" value="need"><span>Needs you <span class="n" data-count="need">3</span></span></label>
+            <label><input class="visually-hidden" type="radio" name="board-filter" value="prog"><span>In progress <span class="n" data-count="prog">13</span></span></label>
+            <label><input class="visually-hidden" type="radio" name="board-filter" value="done"><span>Done <span class="n" data-count="done">4</span></span></label>
+          </fieldset>
+        </div>
+        <div class="board-head" aria-hidden="true">
+          <span>Ticket</span>
+          <span>State</span>
+          <span>Progress</span>
+          <span>Next step</span>
+        </div>
+        <ul class="board-rows" role="list">
+        <li class="row" data-cat="need" data-show="need" data-interim="Resolving the conflict" data-final-cat="done" data-final-state="Done" data-final-detail="Merged just now" data-final-count="8 of 8">
+          <span class="row-id">FRED-118</span>
+          <span class="row-title" id="t-118" tabindex="-1">Offline queue for logged habits</span>
+          <span class="row-state"><span class="st-name">Needs you</span> <span class="st-detail">Conflicts with main</span></span>
+          <span class="row-prog"><span class="count">8 of 8</span><span class="bar" aria-hidden="true"><span class="fill" style="--p: 100%"></span></span></span>
+          <span class="row-next"><span class="next-text">Fix conflict</span></span>
+        </li>
+        <li class="row" data-cat="need" data-show="need" data-interim="Sending your answer" data-final-cat="prog" data-final-state="Running" data-final-detail="Build it" data-final-count="3 of 9">
+          <span class="row-id">FRED-121</span>
+          <span class="row-title" id="t-121" tabindex="-1">Weekly summary email</span>
+          <span class="row-state"><span class="st-name">Needs you</span> <span class="st-detail">The Worker has a question</span></span>
+          <span class="row-prog"><span class="count">2 of 9</span><span class="bar" aria-hidden="true"><span class="fill" style="--p: 22.2%"></span></span></span>
+          <span class="row-next"><span class="next-text">Answer</span></span>
+        </li>
+        <li class="row" data-cat="need" data-show="need" data-interim="Retrying checks" data-final-cat="prog" data-final-state="In review" data-final-detail="Merges itself when checks pass" data-final-count="7 of 7">
+          <span class="row-id">FRED-109</span>
+          <span class="row-title" id="t-109" tabindex="-1">Timezone change handling</span>
+          <span class="row-state"><span class="st-name">Needs you</span> <span class="st-detail">Checks failed twice</span></span>
+          <span class="row-prog"><span class="count">6 of 7</span><span class="bar" aria-hidden="true"><span class="fill" style="--p: 85.7%"></span></span></span>
+          <span class="row-next"><span class="next-text">Retry checks</span></span>
+        </li>
+        <li class="row" data-cat="prog" data-show="prog">
+          <span class="row-id">FRED-122</span>
+          <span class="row-title" id="t-122" tabindex="-1">Streak counter on the home screen</span>
+          <span class="row-state"><span class="st-name">Running</span> <span class="st-detail">Build it</span></span>
+          <span class="row-prog"><span class="count">5 of 8</span><span class="bar" aria-hidden="true"><span class="fill" style="--p: 62.5%"></span></span></span>
+          <span class="row-next"></span>
+        </li>
+        <li class="row" data-cat="prog" data-show="prog">
+          <span class="row-id">FRED-123</span>
+          <span class="row-title" id="t-123" tabindex="-1">Reminder time picker</span>
+          <span class="row-state"><span class="st-name">Running</span> <span class="st-detail">Build it</span></span>
+          <span class="row-prog"><span class="count">3 of 8</span><span class="bar" aria-hidden="true"><span class="fill" style="--p: 37.5%"></span></span></span>
+          <span class="row-next"></span>
+        </li>
+        <li class="row" data-cat="prog" data-show="prog">
+          <span class="row-id">FRED-124</span>
+          <span class="row-title" id="t-124" tabindex="-1">Empty state for a new habit</span>
+          <span class="row-state"><span class="st-name">Running</span> <span class="st-detail">Verify it works</span></span>
+          <span class="row-prog"><span class="count">6 of 7</span><span class="bar" aria-hidden="true"><span class="fill" style="--p: 85.7%"></span></span></span>
+          <span class="row-next"></span>
+        </li>
+        <li class="row" data-cat="prog" data-show="prog">
+          <span class="row-id">FRED-125</span>
+          <span class="row-title" id="t-125" tabindex="-1">Calendar heat map</span>
+          <span class="row-state"><span class="st-name">Running</span> <span class="st-detail">Plan</span></span>
+          <span class="row-prog"><span class="count">1 of 10</span><span class="bar" aria-hidden="true"><span class="fill" style="--p: 10%"></span></span></span>
+          <span class="row-next"></span>
+        </li>
+        <li class="row" data-cat="prog" data-show="prog">
+          <span class="row-id">FRED-126</span>
+          <span class="row-title" id="t-126" tabindex="-1">Undo for a missed day</span>
+          <span class="row-state"><span class="st-name">Running</span> <span class="st-detail">Tests</span></span>
+          <span class="row-prog"><span class="count">4 of 6</span><span class="bar" aria-hidden="true"><span class="fill" style="--p: 66.7%"></span></span></span>
+          <span class="row-next"></span>
+        </li>
+        <li class="row" data-cat="prog" data-show="prog">
+          <span class="row-id">FRED-127</span>
+          <span class="row-title" id="t-127" tabindex="-1">Push permission prompt</span>
+          <span class="row-state"><span class="st-name">Running</span> <span class="st-detail">Build it</span></span>
+          <span class="row-prog"><span class="count">2 of 7</span><span class="bar" aria-hidden="true"><span class="fill" style="--p: 28.6%"></span></span></span>
+          <span class="row-next"></span>
+        </li>
+        <li class="row" data-cat="prog" data-show="prog">
+          <span class="row-id">FRED-128</span>
+          <span class="row-title" id="t-128" tabindex="-1">Export data as CSV</span>
+          <span class="row-state"><span class="st-name">Running</span> <span class="st-detail">Build it</span></span>
+          <span class="row-prog"><span class="count">6 of 9</span><span class="bar" aria-hidden="true"><span class="fill" style="--p: 66.7%"></span></span></span>
+          <span class="row-next"></span>
+        </li>
+        <li class="row" data-cat="prog" data-show="prog">
+          <span class="row-id">FRED-129</span>
+          <span class="row-title" id="t-129" tabindex="-1">Error page for failed sync</span>
+          <span class="row-state"><span class="st-name">Running</span> <span class="st-detail">Review by a second agent</span></span>
+          <span class="row-prog"><span class="count">7 of 8</span><span class="bar" aria-hidden="true"><span class="fill" style="--p: 87.5%"></span></span></span>
+          <span class="row-next"></span>
+        </li>
+        <li class="row" data-cat="prog" data-show="prog">
+          <span class="row-id">FRED-130</span>
+          <span class="row-title" id="t-130" tabindex="-1">Delete account flow</span>
+          <span class="row-state"><span class="st-name">Running</span> <span class="st-detail">Plan</span></span>
+          <span class="row-prog"><span class="count">2 of 11</span><span class="bar" aria-hidden="true"><span class="fill" style="--p: 18.2%"></span></span></span>
+          <span class="row-next"></span>
+        </li>
+        <li class="row" data-cat="prog" data-show="prog">
+          <span class="row-id">FRED-116</span>
+          <span class="row-title" id="t-116" tabindex="-1">Sign in with email link</span>
+          <span class="row-state"><span class="st-name">In review</span> <span class="st-detail">Merges itself when checks pass</span></span>
+          <span class="row-prog"><span class="count">8 of 8</span><span class="bar" aria-hidden="true"><span class="fill" style="--p: 100%"></span></span></span>
+          <span class="row-next"></span>
+        </li>
+        <li class="row" data-cat="prog" data-show="prog">
+          <span class="row-id">FRED-117</span>
+          <span class="row-title" id="t-117" tabindex="-1">Settings page</span>
+          <span class="row-state"><span class="st-name">In review</span> <span class="st-detail">Merges itself when checks pass</span></span>
+          <span class="row-prog"><span class="count">6 of 6</span><span class="bar" aria-hidden="true"><span class="fill" style="--p: 100%"></span></span></span>
+          <span class="row-next"></span>
+        </li>
+        <li class="row" data-cat="prog" data-show="prog">
+          <span class="row-id">FRED-131</span>
+          <span class="row-title" id="t-131" tabindex="-1">Accessibility pass on forms</span>
+          <span class="row-state"><span class="st-name">Queued</span> <span class="st-detail">Starts when a slot frees up</span></span>
+          <span class="row-prog"><span class="count">0 of 7</span><span class="bar" aria-hidden="true"><span class="fill" style="--p: 0%"></span></span></span>
+          <span class="row-next"></span>
+        </li>
+        <li class="row" data-cat="prog" data-show="prog">
+          <span class="row-id">FRED-132</span>
+          <span class="row-title" id="t-132" tabindex="-1">App icon and splash</span>
+          <span class="row-state"><span class="st-name">Queued</span> <span class="st-detail">Starts when a slot frees up</span></span>
+          <span class="row-prog"><span class="count">0 of 4</span><span class="bar" aria-hidden="true"><span class="fill" style="--p: 0%"></span></span></span>
+          <span class="row-next"></span>
+        </li>
+        <li class="row" data-cat="done" data-show="done">
+          <span class="row-id">FRED-112</span>
+          <span class="row-title" id="t-112" tabindex="-1">Dark theme tokens</span>
+          <span class="row-state"><span class="st-name">Done</span> <span class="st-detail">Merged 12 min ago</span></span>
+          <span class="row-prog"><span class="count">6 of 6</span><span class="bar" aria-hidden="true"><span class="fill" style="--p: 100%"></span></span></span>
+          <span class="row-next"></span>
+        </li>
+        <li class="row" data-cat="done" data-show="done">
+          <span class="row-id">FRED-113</span>
+          <span class="row-title" id="t-113" tabindex="-1">Onboarding, three screens</span>
+          <span class="row-state"><span class="st-name">Done</span> <span class="st-detail">Merged 25 min ago</span></span>
+          <span class="row-prog"><span class="count">9 of 9</span><span class="bar" aria-hidden="true"><span class="fill" style="--p: 100%"></span></span></span>
+          <span class="row-next"></span>
+        </li>
+        <li class="row" data-cat="done" data-show="done">
+          <span class="row-id">FRED-114</span>
+          <span class="row-title" id="t-114" tabindex="-1">Habit archive and restore</span>
+          <span class="row-state"><span class="st-name">Done</span> <span class="st-detail">Merged 28 min ago</span></span>
+          <span class="row-prog"><span class="count">7 of 7</span><span class="bar" aria-hidden="true"><span class="fill" style="--p: 100%"></span></span></span>
+          <span class="row-next"></span>
+        </li>
+        <li class="row" data-cat="done" data-show="done">
+          <span class="row-id">FRED-115</span>
+          <span class="row-title" id="t-115" tabindex="-1">Rate limit on reminders</span>
+          <span class="row-state"><span class="st-name">Done</span> <span class="st-detail">Merged 44 min ago</span></span>
+          <span class="row-prog"><span class="count">5 of 5</span><span class="bar" aria-hidden="true"><span class="fill" style="--p: 100%"></span></span></span>
+          <span class="row-next"></span>
+        </li>
+        </ul>
+        <div class="board-empty">
+          <p>Nothing needs you. Everything else is moving or done.</p>
+          <button type="button" class="board-reset" hidden>Reset the sketch</button>
+        </div>
+      </div>
+      <div class="board-foot">
+        <p class="board-caption">Sample data. The ticket names are made up and nothing here talks to Fredrin.</p>
+        <button type="button" class="board-reset" hidden>Reset the sketch</button>
+      </div>
+    </section>
+    <section id="notes" aria-labelledby="notes-heading">
+      <h2 id="notes-heading">Notes from building this page in Fredrin</h2>
+      <p class="notes-intro">I built this page in Fredrin on November 25, 2026, my first time using it. Here is what I noticed.</p>
+      <div class="notes-sheet">
+        <div class="note">
+          <h3 class="note-title">What worked</h3>
+          <p class="note-text">Conflicts. Two tickets ran at once and both edited the same part of index.html. The second ticket said Conflicts with main, paused its auto merge, and gave me one button, Fix Conflict. About a minute later it was merged. I never opened a terminal.</p>
+        </div>
+        <div class="note">
+          <h3 class="note-title">Quick win 1</h3>
+          <dl class="note-lines">
+            <div>
+              <dt class="mono">What I saw.</dt>
+              <dd>Fredrin rewrote my ticket when I created it. The title changed, my section labels changed, and the Activity tab logged the description going from 10,270 characters to 9,663.</dd>
+            </div>
+            <div>
+              <dt class="mono">Why it matters.</dt>
+              <dd>My brief said to save a block of copy character for character. I couldn't tell what the Worker actually received, so I compared the committed file against my own copy to be sure.</dd>
+            </div>
+            <div>
+              <dt class="mono">What I'd try.</dt>
+              <dd>Keep the original one click away. A toggle on the ticket summary that switches between what I typed and what the Worker got.</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="note">
+          <h3 class="note-title">Quick win 2</h3>
+          <dl class="note-lines">
+            <div>
+              <dt class="mono">What I saw.</dt>
+              <dd>With two tickets running, both cards on the board showed a title and a timestamp. The plan checklist and its count only show after you open the ticket.</dd>
+            </div>
+            <div>
+              <dt class="mono">Why it matters.</dt>
+              <dd>The brief for this role is to make twenty agents feel as calm as one. I can't open twenty tickets to see which one is stuck.</dd>
+            </div>
+            <div>
+              <dt class="mono">What I'd try.</dt>
+              <dd>Put the checklist count and the current step on the card, so the board answers how far along a ticket is without a click. The sketch above does this.</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="note">
+          <h3 class="note-title">One observation</h3>
+          <p class="note-text">The board tells me a ticket's state, and the reason for that state usually sits one level down. A ticket sat under Needs attention while its panel said it would merge itself. A finished run ended its terminal preview with a heartbeat rejected line that read like a failure. I'd bring the reason and the next step up next to the status. The sketch above is my first pass at that.</p>
+        </div>
+      </div>
+    </section>
     <section id="work" aria-labelledby="work-heading">
       <h2 id="work-heading">What I've shipped</h2>
       <div class="work-grid">
         <article class="card card-wide">
+          <img class="card-img" src="https://michaelawilson.co/img/home-03-mileiq-recommendations-screen-iphone-unclass.webp" width="1400" height="875" alt="MileIQ Recommendations screen on an iPhone, listing suggested drives with a Business or Personal label on each" loading="lazy" decoding="async">
           <p class="card-label">MileIQ, designing for AI</p>
           <h3>Reviewing a model that is sometimes wrong</h3>
           <p class="card-body">MileIQ's model could suggest whether a drive was business or personal, and it could be wrong. I was the sole designer on the trust, review, and bulk classification patterns. Every suggestion landed in one reviewable list. The team received a Microsoft Patent Award.</p>
@@ -63,6 +291,7 @@
           <p class="card-link"><a href="https://michaelawilson.co/mileiq-case-study" aria-label="Read the case study for MileIQ">Read the case study</a></p>
         </article>
         <article class="card">
+          <img class="card-img" src="https://michaelawilson.co/img/home-06-a-d-global-accounts-table-actions-menu.webp" width="1400" height="875" alt="A-D Global support portal accounts table with a three dot actions menu open on one row, showing View account, Edit, Duplicate and Archive" loading="lazy" decoding="async">
           <p class="card-label">A-D Global, usability testing</p>
           <h3>Visible beats clean</h3>
           <p class="card-body">Account managers worked in one data table all day. I was sure that hiding row actions until hover would clean it up. I tested it with five power users and none of them found the action on the first try. One decided the feature had been removed. I shipped a persistent actions column with a three dot menu on every row, and everyone in the next round got it on the first try.</p>
@@ -71,6 +300,7 @@
           <p class="card-link"><a href="https://michaelawilson.co/a-d-global-case-study" aria-label="Read the case study for A-D Global">Read the case study</a></p>
         </article>
         <article class="card">
+          <img class="card-img" src="https://michaelawilson.co/img/home-02-fromatob-controls-sheet-checkboxes-radios.webp" width="820" height="512" alt="fromAtoB design system controls sheet showing radios, switches and checkboxes in each state, on light and on dark" loading="lazy" decoding="async">
           <p class="card-label">fromAtoB, design system</p>
           <h3>One system for web, iOS, and Android</h3>
           <p class="card-body">I built one governed design system across three platforms. Colors went from 28 to 17 and components from 80 to 47. The search button's contrast went from 1.8 to 1 up to 7.2 to 1.</p>
@@ -82,81 +312,157 @@
       <p class="work-also">Also on my site. Independent UX audits of two AI products, <a href="https://michaelawilson.co/aside-ux-audit">Aside</a> and <a href="https://michaelawilson.co/sudowrite-ux-audit">Sudowrite</a>, and four coded prototypes including <a href="https://michaelawilson.co/swipe-to-classify">Swipe to classify</a>.</p>
     </section>
     <section id="principles" aria-labelledby="principles-heading">
-      <div class="measure">
-        <h2 id="principles-heading">How I design dense interfaces</h2>
-        <ol class="principles-list">
-          <li>
-            <p class="principle-number">01</p>
-            <h3>Visible beats clean.</h3>
-            <p class="principle-support">For people who live in a tool all day, an action they can see is faster than an interface that looks tidy. I learned that from five users who couldn't find a hidden action.</p>
-          </li>
-          <li>
-            <p class="principle-number">02</p>
-            <h3>A button beats a prompt when a button works.</h3>
-            <p class="principle-support">Chat is the wrong shape for most actions. When an open prompt replaces clear navigation, people have to learn prompting to do what a click used to do.</p>
-          </li>
-          <li>
-            <p class="principle-number">03</p>
-            <h3>Every state gets designed.</h3>
-            <p class="principle-support">Empty, loading, error, disabled, focused. At fromAtoB every button was documented in five states. One of my coded prototypes is called <a href="https://michaelawilson.co/one-field">One field, every state</a>.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-    <section id="notes" aria-labelledby="notes-heading">
-      <h2 id="notes-heading">Notes from building this page in Fredrin</h2>
-      <p class="notes-intro">I built this page in Fredrin on November 25, 2026, my first time using it. Here is what I noticed.</p>
-      <div class="notes-grid">
-        <div class="note">
-          <h3 class="note-title">What worked</h3>
-          <p>Conflicts. Two tickets ran at once and both edited the same part of index.html. The second ticket said Conflicts with main, paused its auto merge, and gave me one button, Fix Conflict. About a minute later it was merged. I never opened a terminal.</p>
-        </div>
-        <div class="note">
-          <h3 class="note-title">Quick win 1</h3>
-          <dl class="note-lines">
-            <dt class="mono">What I saw.</dt>
-            <dd>Fredrin rewrote my ticket when I created it. The title changed, my section labels changed, and the Activity tab logged the description going from 10,270 characters to 9,663.</dd>
-            <dt class="mono">Why it matters.</dt>
-            <dd>My brief said to save a block of copy character for character. I couldn't tell what the Worker actually received, so I compared the committed file against my own copy to be sure.</dd>
-            <dt class="mono">What I'd try.</dt>
-            <dd>Keep the original one click away. A toggle on the ticket summary that switches between what I typed and what the Worker got.</dd>
-          </dl>
-        </div>
-        <div class="note">
-          <h3 class="note-title">Quick win 2</h3>
-          <dl class="note-lines">
-            <dt class="mono">What I saw.</dt>
-            <dd>With two tickets running, both cards on the board showed a title and a timestamp. The plan checklist and its count only show after you open the ticket.</dd>
-            <dt class="mono">Why it matters.</dt>
-            <dd>The brief for this role is to make twenty agents feel as calm as one. I can't open twenty tickets to see which one is stuck.</dd>
-            <dt class="mono">What I'd try.</dt>
-            <dd>Put the checklist count and the current step on the card, so the board answers how far along a ticket is without a click.</dd>
-          </dl>
-        </div>
-        <div class="note">
-          <h3 class="note-title">One observation</h3>
-          <p>The board tells me a ticket's state, and the reason for that state usually sits one level down. A ticket sat under Needs attention while its panel said it would merge itself. A finished run ended its terminal preview with a heartbeat rejected line that read like a failure. I'd bring the reason and the next step up next to the status.</p>
-        </div>
-      </div>
+      <h2 id="principles-heading">How I design dense interfaces</h2>
+      <ul class="principles-list">
+        <li>
+          <h3>Visible beats clean.</h3>
+          <p class="principle-support">For people who live in a tool all day, an action they can see is faster than an interface that looks tidy. I learned that from five users who couldn't find a hidden action.</p>
+        </li>
+        <li>
+          <h3>A button beats a prompt when a button works.</h3>
+          <p class="principle-support">Chat is the wrong shape for most actions. When an open prompt replaces clear navigation, people have to learn prompting to do what a click used to do.</p>
+        </li>
+        <li>
+          <h3>Every state gets designed.</h3>
+          <p class="principle-support">Empty, loading, error, disabled, focused. At fromAtoB every button was documented in five states. One of my coded prototypes is called <a href="https://michaelawilson.co/one-field">One field, every state</a>.</p>
+        </li>
+      </ul>
     </section>
     <section id="contact" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Reach me</h2>
-      <p class="contact-line">Available for remote product design roles. Email is fastest.</p>
-      <div class="contact-email">
-        <button type="button" class="copy-btn" data-email="hello@michaelawilson.co">hello@michaelawilson.co</button>
-        <a href="mailto:hello@michaelawilson.co">Email</a>
-        <span class="visually-hidden" role="status" aria-live="polite" id="copy-status"></span>
+      <div class="contact-intro">
+        <h2 id="contact-heading">Reach me</h2>
+        <p class="contact-line">Available for remote product design roles. Email is fastest.</p>
       </div>
-      <ul class="contact-links">
-        <li><a href="https://www.linkedin.com/in/michaelawilson-">LinkedIn</a></li>
-        <li><a href="https://michaelawilson.co">Portfolio</a></li>
-        <li><a href="https://michaelawilson.co/michael_wilson_resume.pdf">Resume</a></li>
-      </ul>
+      <div class="contact-actions">
+        <div class="contact-email">
+          <button type="button" class="copy-btn" data-email="hello@michaelawilson.co">hello@michaelawilson.co</button>
+          <a href="mailto:hello@michaelawilson.co">Email</a>
+          <span class="visually-hidden" role="status" aria-live="polite" id="copy-status"></span>
+        </div>
+        <ul class="contact-links">
+          <li><a href="https://www.linkedin.com/in/michaelawilson-">LinkedIn</a></li>
+          <li><a href="https://michaelawilson.co">Portfolio</a></li>
+          <li><a href="https://michaelawilson.co/michael_wilson_resume.pdf">Resume</a></li>
+        </ul>
+      </div>
     </section>
   </main>
   <footer id="colophon">
-    <p class="colophon-line">Built with Fredrin in 6 tickets over one afternoon, two of them in parallel. Plain HTML and CSS. Set in Schibsted Grotesk.</p>
+    <p class="colophon-line">Built with Fredrin in 7 tickets over one afternoon, two of them in parallel. Plain HTML and CSS.</p>
   </footer>
+  <script>
+    (function () {
+      var board = document.getElementById('board-panel');
+      if (!board) return;
+      var rows = [].slice.call(board.querySelectorAll('.row'));
+      var summary = document.getElementById('board-summary');
+      var resets = [].slice.call(document.querySelectorAll('.board-reset'));
+      var DELAY = 2400;
+      var starts = rows.map(function (row) {
+        return { html: row.innerHTML, cat: row.dataset.cat, show: row.dataset.show };
+      });
+
+      function tally() {
+        var t = { need: 0, prog: 0, done: 0 };
+        rows.forEach(function (row) { t[row.dataset.cat]++; });
+        return t;
+      }
+
+      function update() {
+        var t = tally();
+        var need = t.need === 0 ? 'Nothing needs you.' : t.need === 1 ? '1 needs you.' : t.need + ' need you.';
+        summary.textContent = need + ' ' + t.prog + ' in progress. ' + t.done + ' done.';
+        var counts = { all: rows.length, need: t.need, prog: t.prog, done: t.done };
+        [].forEach.call(board.querySelectorAll('[data-count]'), function (el) {
+          el.textContent = counts[el.dataset.count];
+        });
+      }
+
+      function percent(text) {
+        var p = text.split(' of ');
+        return Math.round(p[0] / p[1] * 1000) / 10;
+      }
+
+      function setState(row, name, detail) {
+        var cell = row.querySelector('.row-state');
+        cell.textContent = '';
+        var n = document.createElement('span');
+        n.className = 'st-name';
+        n.textContent = name;
+        var d = document.createElement('span');
+        d.className = 'st-detail';
+        d.textContent = detail;
+        cell.appendChild(n);
+        cell.appendChild(document.createTextNode(' '));
+        cell.appendChild(d);
+      }
+
+      function enhance(row) {
+        var text = row.querySelector('.next-text');
+        if (!text || !row.dataset.interim) return;
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'next-btn';
+        btn.textContent = text.textContent;
+        btn.setAttribute('aria-describedby', row.querySelector('.row-title').id);
+        text.parentNode.replaceChild(btn, text);
+      }
+
+      function begin(row) {
+        row.dataset.cat = 'prog';
+        row.dataset.show = row.dataset.show + ' prog';
+        row.classList.add('is-working');
+        setState(row, '', row.dataset.interim);
+        row.querySelector('.row-next').textContent = '';
+        row.querySelector('.row-title').focus();
+        update();
+        row.timer = setTimeout(function () { settle(row); }, DELAY);
+      }
+
+      function settle(row) {
+        var active = document.activeElement;
+        row.timer = null;
+        row.classList.remove('is-working');
+        row.dataset.cat = row.dataset.finalCat;
+        row.dataset.show = row.dataset.finalCat;
+        setState(row, row.dataset.finalState, row.dataset.finalDetail);
+        row.querySelector('.count').textContent = row.dataset.finalCount;
+        row.querySelector('.fill').style.setProperty('--p', percent(row.dataset.finalCount) + '%');
+        update();
+        if (active && row.contains(active) && row.offsetParent === null) {
+          board.querySelector('input[name="board-filter"]:checked').focus();
+        }
+      }
+
+      board.addEventListener('click', function (e) {
+        var btn = e.target.closest('.next-btn');
+        if (btn) begin(btn.closest('.row'));
+      });
+
+      function reset() {
+        rows.forEach(function (row, i) {
+          clearTimeout(row.timer);
+          row.timer = null;
+          row.classList.remove('is-working');
+          row.innerHTML = starts[i].html;
+          row.dataset.cat = starts[i].cat;
+          row.dataset.show = starts[i].show;
+          enhance(row);
+        });
+        update();
+        var active = document.activeElement;
+        if (active && active.closest('.board-empty')) {
+          board.querySelector('input[name="board-filter"]:checked').focus();
+        }
+      }
+
+      rows.forEach(enhance);
+      resets.forEach(function (btn) {
+        btn.hidden = false;
+        btn.addEventListener('click', reset);
+      });
+    })();
+  </script>
   <script>
     (function () {
       var btn = document.querySelector('.copy-btn');

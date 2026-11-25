@@ -31,3 +31,16 @@
   gap: var(--sp-24);
   margin-top: var(--sp-24);
 }
+
+@media (min-width: 900px) {
+  #contact {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--sp-32);
+    align-items: start;
+  }
+
+  .contact-email {
+    margin-top: 0;
+  }
+}
