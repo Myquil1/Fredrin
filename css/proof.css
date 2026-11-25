@@ -1,6 +1,7 @@
 .proof-list {
   display: grid;
   grid-template-columns: 1fr;
+  justify-items: start;
   gap: var(--sp-32);
   border-top: 1px solid var(--border);
   padding-top: var(--sp-32);
@@ -12,6 +13,7 @@
   line-height: 1.2;
   color: var(--accent);
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 .proof-label {
@@ -20,7 +22,7 @@
   margin-top: var(--sp-8);
 }
 
-@media (min-width: 720px) {
+@media (min-width: 1040px) {
   .proof-list {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--sp-48);
