@@ -1,10 +1,4 @@
-#contact h2 {
-  font-size: var(--fs-32);
-  line-height: 1.2;
-}
-
 .contact-line {
-  margin-top: var(--sp-16);
   max-width: var(--measure);
   color: var(--muted);
 }
@@ -31,23 +25,9 @@
   border-color: var(--accent);
 }
 
-.copy-btn:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: var(--sp-4);
-}
-
 .contact-links {
   display: flex;
   flex-wrap: wrap;
   gap: var(--sp-24);
   margin-top: var(--sp-24);
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
 }

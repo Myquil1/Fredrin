@@ -1,10 +1,4 @@
-#notes h2 {
-  font-size: var(--fs-32);
-  line-height: 1.2;
-}
-
 .notes-intro {
-  margin-top: var(--sp-16);
   max-width: var(--measure);
   color: var(--muted);
 }
