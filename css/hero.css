@@ -1,0 +1,42 @@
+#hero {
+  padding-top: var(--sp-64);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-13);
+  color: var(--muted);
+  margin-bottom: var(--sp-16);
+}
+
+#hero h1 {
+  font-size: var(--fs-32);
+  line-height: 1.1;
+  font-weight: 700;
+  max-width: var(--measure);
+}
+
+.subhead {
+  font-size: var(--fs-17);
+  color: var(--muted);
+  max-width: var(--measure);
+  margin-top: var(--sp-24);
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-12) var(--sp-24);
+  margin-top: var(--sp-32);
+  font-size: var(--fs-15);
+}
+
+@media (min-width: 720px) {
+  #hero {
+    padding-top: var(--sp-96);
+  }
+
+  #hero h1 {
+    font-size: var(--fs-56);
+  }
+}
