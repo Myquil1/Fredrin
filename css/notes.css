@@ -3,17 +3,18 @@
   color: var(--muted);
 }
 
-.notes-grid {
-  display: grid;
-  gap: var(--sp-16);
+.notes-sheet {
   margin-top: var(--sp-32);
-  max-width: var(--measure);
+  background: var(--surface);
+  border: 1px solid var(--border);
 }
 
 .note {
-  background: var(--surface);
-  border: 1px solid var(--border);
   padding: var(--sp-24);
+}
+
+.note + .note {
+  border-top: 1px solid var(--border);
 }
 
 .note-title {
@@ -22,21 +23,39 @@
   margin-bottom: var(--sp-12);
 }
 
+.note-text {
+  max-width: var(--measure);
+}
+
 .note-lines {
   display: grid;
-  gap: var(--sp-4);
+  gap: var(--sp-16);
 }
 
 .note-lines dt {
   font-size: var(--fs-13);
   color: var(--muted);
-  margin-top: var(--sp-8);
-}
-
-.note-lines dt:first-child {
-  margin-top: 0;
+  margin-bottom: var(--sp-4);
 }
 
 .note-lines dd {
   margin: 0;
+}
+
+@media (min-width: 900px) {
+  .note {
+    display: grid;
+    grid-template-columns: calc(var(--sp-96) * 2 + var(--sp-32)) minmax(0, 1fr);
+    column-gap: var(--sp-32);
+    align-items: start;
+  }
+
+  .note-title {
+    margin-bottom: 0;
+  }
+
+  .note-lines {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--sp-24);
+  }
 }

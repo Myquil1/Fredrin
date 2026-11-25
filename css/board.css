@@ -1,0 +1,349 @@
+#board {
+  --col-id: calc(var(--sp-64) + var(--sp-8));
+  --col-prog: calc(var(--sp-96) + var(--sp-8));
+  --col-next: calc(var(--sp-96) + var(--sp-32) + var(--sp-8));
+}
+
+.board-intro {
+  max-width: var(--measure);
+}
+
+.board {
+  margin-top: var(--sp-32);
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.board-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-8) var(--sp-24);
+  padding: var(--sp-8) var(--sp-16);
+  border-bottom: 1px solid var(--border);
+}
+
+.board-summary {
+  font-size: var(--fs-15);
+  font-variant-numeric: tabular-nums;
+}
+
+.board-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--sp-16);
+  min-width: 0;
+  padding: 0;
+  border: 0;
+}
+
+.board-filter label {
+  position: relative;
+  display: block;
+  padding: var(--sp-8) 0;
+  font-size: var(--fs-15);
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.board-filter label > span {
+  display: block;
+  padding-bottom: var(--sp-4);
+  border-bottom: 2px solid transparent;
+}
+
+.board-filter label:has(input:checked) {
+  color: var(--text);
+}
+
+.board-filter label:has(input:checked) > span {
+  border-bottom-color: var(--text);
+}
+
+.board-filter label:has(input:focus-visible) {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.board-filter .n {
+  display: inline;
+  padding: 0;
+  border: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.board-head {
+  display: none;
+}
+
+.board-rows {
+  display: block;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "title title"
+    "state state"
+    "prog next";
+  align-items: center;
+  gap: var(--sp-4) var(--sp-12);
+  padding: var(--sp-12) var(--sp-16);
+  font-size: var(--fs-15);
+  line-height: 1.5;
+}
+
+.row + .row {
+  border-top: 1px solid var(--border);
+}
+
+.row-id {
+  display: none;
+  font-family: var(--font-mono);
+  font-size: var(--fs-13);
+  color: var(--muted);
+}
+
+.row-title {
+  grid-area: title;
+  min-width: 0;
+}
+
+.row-title:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.row-state {
+  grid-area: state;
+  min-width: 0;
+}
+
+.st-detail {
+  color: var(--muted);
+}
+
+.row-prog {
+  grid-area: prog;
+  min-width: 0;
+  max-width: var(--col-prog);
+}
+
+.count {
+  display: block;
+  font-variant-numeric: tabular-nums;
+}
+
+.bar {
+  display: block;
+  height: var(--sp-4);
+  margin-top: var(--sp-4);
+  background: var(--border);
+}
+
+.fill {
+  display: block;
+  width: var(--p);
+  height: 100%;
+  background: var(--muted);
+}
+
+.row-next {
+  grid-area: next;
+  min-width: 0;
+  justify-self: end;
+}
+
+.next-text {
+  color: var(--text);
+}
+
+/* Needs you rows say why and carry the next step */
+.row[data-cat="need"] .row-title,
+.row[data-cat="need"] .st-name {
+  font-weight: 700;
+}
+
+.row[data-cat="need"] .st-detail {
+  color: var(--accent);
+}
+
+.row[data-cat="need"] .fill {
+  background: var(--text);
+}
+
+.row[data-cat="done"],
+.row[data-cat="done"] .st-detail,
+.row[data-cat="done"] .row-id {
+  color: var(--muted);
+}
+
+.row.is-working .st-name {
+  display: none;
+}
+
+.row.is-working .st-detail {
+  color: var(--text);
+}
+
+.row.is-working .fill {
+  background: var(--text);
+  animation: board-sweep 2400ms linear forwards;
+}
+
+@keyframes board-sweep {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.next-btn {
+  font: inherit;
+  font-weight: 700;
+  color: var(--surface);
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  padding: var(--sp-4) var(--sp-8);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.next-btn:hover {
+  text-decoration: underline;
+  text-underline-offset: var(--sp-4);
+}
+
+/* Filtering works in CSS alone */
+.board:has(input[value="need"]:checked) .row:not([data-show~="need"]),
+.board:has(input[value="prog"]:checked) .row:not([data-show~="prog"]),
+.board:has(input[value="done"]:checked) .row:not([data-show~="done"]) {
+  display: none;
+}
+
+.board-empty {
+  display: none;
+  padding: var(--sp-32) var(--sp-16);
+}
+
+.board-empty p {
+  font-size: var(--fs-15);
+}
+
+.board-empty .board-reset {
+  margin-top: var(--sp-12);
+}
+
+.board:has(input[value="need"]:checked):not(:has(.row[data-show~="need"])) .board-empty {
+  display: block;
+}
+
+.board:has(input[value="need"]:checked):not(:has(.row[data-show~="need"])) .board-head {
+  display: none;
+}
+
+.board-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-8) var(--sp-24);
+  margin-top: var(--sp-12);
+}
+
+.board-caption {
+  font-size: var(--fs-13);
+  color: var(--muted);
+}
+
+.board-reset {
+  font: inherit;
+  font-size: var(--fs-13);
+  color: var(--text);
+  background: none;
+  border: 0;
+  padding: var(--sp-4) 0;
+  text-decoration: underline;
+  text-underline-offset: var(--sp-4);
+  cursor: pointer;
+}
+
+.board-reset[hidden] {
+  display: none;
+}
+
+.board-reset:hover {
+  text-decoration-thickness: 0.125em;
+}
+
+@media (min-width: 720px) {
+  .board-bar {
+    flex-wrap: nowrap;
+    padding-inline: var(--sp-16);
+  }
+
+  .board-head,
+  .row {
+    display: grid;
+    grid-template-columns:
+      var(--col-id)
+      minmax(0, 1.1fr)
+      minmax(0, 1.2fr)
+      var(--col-prog)
+      var(--col-next);
+    column-gap: var(--sp-12);
+    align-items: center;
+    padding-inline: var(--sp-16);
+  }
+
+  .board-head {
+    padding-block: var(--sp-8);
+    border-bottom: 1px solid var(--border);
+    font-family: var(--font-mono);
+    font-size: var(--fs-13);
+    line-height: 1.5;
+    color: var(--muted);
+  }
+
+  .row {
+    grid-template-areas: none;
+    min-height: var(--sp-48);
+    padding-block: var(--sp-8);
+  }
+
+  .row > *,
+  .row-title,
+  .row-state,
+  .row-prog,
+  .row-next {
+    grid-area: auto;
+  }
+
+  .board-head span:first-child {
+    grid-column: 1 / 3;
+  }
+
+  .row-id {
+    display: block;
+  }
+
+  .row-prog {
+    max-width: none;
+  }
+
+  .row-next {
+    justify-self: start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .row.is-working .fill {
+    animation: none;
+    width: 100%;
+  }
+}
