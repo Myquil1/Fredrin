@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Michael Wilson for Fredrin</title>
   <meta name="description" content="Michael Wilson is a product designer applying for the UI/UX designer role at Fredrin. Six years across AI review flows, data tables, and design systems.">
+  <meta name="robots" content="noindex">
   <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0E0E0C" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#FAF7F2" media="(prefers-color-scheme: light)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;700&amp;display=swap">
@@ -19,18 +22,19 @@
   <link rel="stylesheet" href="css/colophon.css">
 </head>
 <body>
-  <main>
-    <section id="hero">
-      <p class="eyebrow">For Fredrin, UI/UX designer</p>
-      <h1>Michael Wilson. Product designer for software people work in all day.</h1>
-      <p class="subhead">Six years across AI review flows, data tables, and design systems, most of it on remote teams. Based in Plano, Texas.</p>
-      <nav class="hero-links" aria-label="Contact links">
-        <a href="mailto:hello@michaelawilson.co">Email</a>
-        <a href="https://www.linkedin.com/in/michaelawilson-">LinkedIn</a>
-        <a href="https://michaelawilson.co">Portfolio</a>
-        <a href="https://michaelawilson.co/michael_wilson_resume.pdf">Resume</a>
-      </nav>
-    </section>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header id="hero">
+    <p class="eyebrow">For Fredrin, UI/UX designer</p>
+    <h1>Michael Wilson. Product designer for software people work in all day.</h1>
+    <p class="subhead">Six years across AI review flows, data tables, and design systems, most of it on remote teams. Based in Plano, Texas.</p>
+    <nav class="hero-links" aria-label="Contact links">
+      <a href="mailto:hello@michaelawilson.co">Email</a>
+      <a href="https://www.linkedin.com/in/michaelawilson-">LinkedIn</a>
+      <a href="https://michaelawilson.co">Portfolio</a>
+      <a href="https://michaelawilson.co/michael_wilson_resume.pdf">Resume</a>
+    </nav>
+  </header>
+  <main id="main">
     <section id="proof" aria-label="Proof">
       <ul class="proof-list">
         <li>
@@ -56,7 +60,7 @@
           <p class="card-body">MileIQ's model could suggest whether a drive was business or personal, and it could be wrong. I was the sole designer on the trust, review, and bulk classification patterns. Every suggestion landed in one reviewable list. The team received a Microsoft Patent Award.</p>
           <p class="card-result">Classification rate up 10 to 20 percentage points</p>
           <p class="card-why">The closest thing in my work to a Fredrin review flow. One person checking machine output at volume.</p>
-          <p class="card-link"><a href="https://michaelawilson.co/mileiq-case-study">Read the case study</a></p>
+          <p class="card-link"><a href="https://michaelawilson.co/mileiq-case-study" aria-label="Read the case study for MileIQ">Read the case study</a></p>
         </article>
         <article class="card">
           <p class="card-label">A-D Global, usability testing</p>
@@ -64,7 +68,7 @@
           <p class="card-body">Account managers worked in one data table all day. I was sure that hiding row actions until hover would clean it up. I tested it with five power users and none of them found the action on the first try. One decided the feature had been removed. I shipped a persistent actions column with a three-dot menu on every row, and everyone in the next round got it on the first try.</p>
           <p class="card-result">Across the portal launch, median time on a core flow fell 21 percent and advanced reporting adoption rose 27 percent</p>
           <p class="card-why">The closest thing in my work to a Fredrin board. A dense screen people keep open all day.</p>
-          <p class="card-link"><a href="https://michaelawilson.co/a-d-global-case-study">Read the case study</a></p>
+          <p class="card-link"><a href="https://michaelawilson.co/a-d-global-case-study" aria-label="Read the case study for A-D Global">Read the case study</a></p>
         </article>
         <article class="card">
           <p class="card-label">fromAtoB, design system</p>
@@ -72,7 +76,7 @@
           <p class="card-body">I built one governed design system across three platforms. Colors went from 28 to 17 and components from 80 to 47. The search button's contrast went from 1.8 to 1 up to 7.2 to 1.</p>
           <p class="card-result">Design handoff time down from 45 minutes to 10</p>
           <p class="card-why">The closest thing in my work to keeping a product and its marketing site coherent.</p>
-          <p class="card-link"><a href="https://michaelawilson.co/fromatob-case-study">Read the case study</a></p>
+          <p class="card-link"><a href="https://michaelawilson.co/fromatob-case-study" aria-label="Read the case study for fromAtoB">Read the case study</a></p>
         </article>
       </div>
       <p class="work-also">Also on my site. Independent UX audits of two AI products, <a href="https://michaelawilson.co/aside-ux-audit">Aside</a> and <a href="https://michaelawilson.co/sudowrite-ux-audit">Sudowrite</a>, and four coded prototypes including <a href="https://michaelawilson.co/swipe-to-classify">Swipe to classify</a>.</p>
@@ -99,44 +103,44 @@
         </ol>
       </div>
     </section>
-    <section id="notes">
-      <h2>Notes from building this page in Fredrin</h2>
-      <p class="notes-intro">I built this page in Fredrin on [DATE] as a first-time user. Here is what I noticed.</p>
+    <section id="notes" aria-labelledby="notes-heading">
+      <h2 id="notes-heading">Notes from building this page in Fredrin</h2>
+      <p class="notes-intro">I built this page in Fredrin on November 25, 2026 as a first-time user. Here is what I noticed.</p>
       <div class="notes-grid">
         <div class="note">
           <h3 class="note-title">What worked</h3>
-          <p>[One thing that worked well, and why it worked]</p>
+          <p>Conflicts. Two tickets ran at once and both edited the same part of index.html. The second ticket said Conflicts with main, paused its auto merge, and gave me one button, Fix Conflict. About a minute later it was merged. I never opened a terminal.</p>
         </div>
         <div class="note">
           <h3 class="note-title">Quick win 1</h3>
           <dl class="note-lines">
             <dt class="mono">What I saw.</dt>
-            <dd>[ ]</dd>
+            <dd>Fredrin rewrote my ticket when I created it. The title changed, my section labels changed, and the Activity tab logged the description going from 10,270 characters to 9,663.</dd>
             <dt class="mono">Why it matters.</dt>
-            <dd>[ ]</dd>
+            <dd>My brief said to save a block of copy character for character. I couldn't tell what the Worker actually received, so I compared the committed file against my own copy to be sure.</dd>
             <dt class="mono">What I'd try.</dt>
-            <dd>[ ]</dd>
+            <dd>Keep the original one click away. A toggle next to the AI-generated label that switches between what I typed and what the Worker got.</dd>
           </dl>
         </div>
         <div class="note">
           <h3 class="note-title">Quick win 2</h3>
           <dl class="note-lines">
             <dt class="mono">What I saw.</dt>
-            <dd>[ ]</dd>
+            <dd>With two tickets running, both cards on the board showed a title and a timestamp. The plan checklist and its count only show after you open the ticket.</dd>
             <dt class="mono">Why it matters.</dt>
-            <dd>[ ]</dd>
+            <dd>The brief for this role is to make twenty agents feel as calm as one. I can't open twenty tickets to see which one is stuck.</dd>
             <dt class="mono">What I'd try.</dt>
-            <dd>[ ]</dd>
+            <dd>Put the checklist count and the current step on the card, so the board answers how far along a ticket is without a click.</dd>
           </dl>
         </div>
         <div class="note">
           <h3 class="note-title">One observation</h3>
-          <p>[A pattern across the whole session, two or three sentences]</p>
+          <p>The board tells me a ticket's state, and the reason for that state usually sits one level down. A ticket sat under Needs attention while its panel said it would merge itself. A finished run ended its terminal preview with a heartbeat rejected line that read like a failure. I'd bring the reason and the next step up next to the status.</p>
         </div>
       </div>
     </section>
-    <section id="contact">
-      <h2>Reach me</h2>
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Reach me</h2>
       <p class="contact-line">Available for remote product design roles. Email is fastest.</p>
       <div class="contact-email">
         <button type="button" class="copy-btn" data-email="hello@michaelawilson.co">hello@michaelawilson.co</button>
@@ -149,10 +153,10 @@
         <li><a href="https://michaelawilson.co/michael_wilson_resume.pdf">Resume</a></li>
       </ul>
     </section>
-    <section id="colophon">
-      <p class="colophon-line">Built with Fredrin in [N] tickets over [N] hours, two of them in parallel. Plain HTML and CSS. Set in Schibsted Grotesk.</p>
-    </section>
   </main>
+  <footer id="colophon">
+    <p class="colophon-line">Built with Fredrin in 4 tickets in under an hour, two of them in parallel. Plain HTML and CSS. Set in Schibsted Grotesk.</p>
+  </footer>
   <script>
     (function () {
       var btn = document.querySelector('.copy-btn');
@@ -161,11 +165,14 @@
       var original = btn.textContent, timer;
       btn.addEventListener('click', function () {
         navigator.clipboard.writeText(btn.dataset.email).then(function () {
+          if (!timer) btn.style.minWidth = btn.getBoundingClientRect().width + 'px';
           btn.textContent = 'Copied';
           status.textContent = 'Email address copied';
           clearTimeout(timer);
           timer = setTimeout(function () {
             btn.textContent = original;
+            btn.style.minWidth = '';
+            timer = null;
             status.textContent = '';
           }, 2000);
         }, function () {});

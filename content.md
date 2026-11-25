@@ -1,6 +1,6 @@
 # content.md
 
-Every word on the page comes from this file. Use it verbatim. Text in square brackets is a blank that gets filled in before the final ticket.
+Every word on the page comes from this file. Use it verbatim.
 
 ## Page title
 
@@ -80,11 +80,11 @@ Section heading on the page is **Notes from building this page in Fredrin**.
 
 | Element | Copy |
 | --- | --- |
-| Intro | I built this page in Fredrin on [DATE] as a first-time user. Here is what I noticed. |
-| What worked | [One thing that worked well, and why it worked] |
-| Quick win 1 | What I saw. [ ] Why it matters. [ ] What I'd try. [ ] |
-| Quick win 2 | What I saw. [ ] Why it matters. [ ] What I'd try. [ ] |
-| One observation | [A pattern across the whole session, two or three sentences] |
+| Intro | I built this page in Fredrin on November 25, 2026 as a first-time user. Here is what I noticed. |
+| What worked | Conflicts. Two tickets ran at once and both edited the same part of index.html. The second ticket said Conflicts with main, paused its auto merge, and gave me one button, Fix Conflict. About a minute later it was merged. I never opened a terminal. |
+| Quick win 1 | What I saw. Fredrin rewrote my ticket when I created it. The title changed, my section labels changed, and the Activity tab logged the description going from 10,270 characters to 9,663. Why it matters. My brief said to save a block of copy character for character. I couldn't tell what the Worker actually received, so I compared the committed file against my own copy to be sure. What I'd try. Keep the original one click away. A toggle next to the AI-generated label that switches between what I typed and what the Worker got. |
+| Quick win 2 | What I saw. With two tickets running, both cards on the board showed a title and a timestamp. The plan checklist and its count only show after you open the ticket. Why it matters. The brief for this role is to make twenty agents feel as calm as one. I can't open twenty tickets to see which one is stuck. What I'd try. Put the checklist count and the current step on the card, so the board answers how far along a ticket is without a click. |
+| One observation | The board tells me a ticket's state, and the reason for that state usually sits one level down. A ticket sat under Needs attention while its panel said it would merge itself. A finished run ended its terminal preview with a heartbeat rejected line that read like a failure. I'd bring the reason and the next step up next to the status. |
 | Redesign image, optional | None |
 
 ## Contact
@@ -101,4 +101,4 @@ Section heading on the page is **Reach me**.
 
 ## Colophon
 
-Built with Fredrin in [N] tickets over [N] hours, two of them in parallel. Plain HTML and CSS. Set in Schibsted Grotesk.
+Built with Fredrin in 4 tickets in under an hour, two of them in parallel. Plain HTML and CSS. Set in Schibsted Grotesk.

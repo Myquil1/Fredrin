@@ -1,3 +1,23 @@
+@font-face {
+  font-family: "Schibsted Grotesk Fallback";
+  font-weight: 400;
+  src: local("Arial"), local("ArialMT"), local("Liberation Sans"), local("Arimo Regular");
+  size-adjust: 104.2%;
+  ascent-override: 93.7%;
+  descent-override: 24.7%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Schibsted Grotesk Fallback";
+  font-weight: 700;
+  src: local("Arial Bold"), local("Arial-BoldMT"), local("Liberation Sans Bold"), local("Arimo Bold");
+  size-adjust: 101.4%;
+  ascent-override: 96.3%;
+  descent-override: 25.4%;
+  line-gap-override: 0%;
+}
+
 :root {
   --bg: #0E0E0C;
   --surface: #171715;
@@ -6,7 +26,7 @@
   --muted: #A3A098;
   --accent: #FB8500;
 
-  --font-sans: "Schibsted Grotesk", system-ui, sans-serif;
+  --font-sans: "Schibsted Grotesk", "Schibsted Grotesk Fallback", system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
   --fs-13: 13px;
@@ -69,11 +89,42 @@ body {
 
 a {
   color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: auto;
+  text-underline-offset: var(--sp-4);
+}
+
+a:hover {
+  background-color: color-mix(in srgb, var(--accent) 6%, transparent);
+  text-decoration-thickness: 0.125em;
 }
 
 a:focus-visible {
+  text-decoration: none;
+}
+
+a:active {
+  background-color: var(--accent);
+  color: var(--bg);
+  text-decoration: none;
+}
+
+a,
+button {
+  transition: color 120ms ease-out, background-color 120ms ease-out, border-color 120ms ease-out;
+}
+
+a:focus-visible,
+button:focus-visible {
   outline: 2px solid var(--accent);
-  outline-offset: var(--sp-4);
+  outline-offset: 2px;
+}
+
+h2 {
+  font-size: var(--fs-32);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--sp-24);
 }
 
 ul {
@@ -85,7 +136,9 @@ ul {
   font-family: var(--font-mono);
 }
 
-main > section {
+body > header,
+main > section,
+body > footer {
   width: 100%;
   max-width: var(--page);
   margin-inline: auto;
@@ -96,8 +149,40 @@ main > section {
   max-width: var(--measure);
 }
 
+.skip-link {
+  position: absolute;
+  top: var(--sp-8);
+  left: var(--sp-8);
+  z-index: 1;
+  padding: var(--sp-8) var(--sp-16);
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.visually-hidden,
+.skip-link:not(:focus) {
+  position: absolute;
+  width: var(--sp-4);
+  height: var(--sp-4);
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 @media (min-width: 720px) {
-  main > section {
+  body > header,
+  main > section,
+  body > footer {
     padding: var(--sp-64) var(--sp-32);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
   }
 }
