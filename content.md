@@ -101,4 +101,4 @@ Section heading on the page is **Reach me**.
 
 ## Colophon
 
-Built with Fredrin in 4 tickets in under an hour, two of them in parallel. Plain HTML and CSS. Set in Schibsted Grotesk.
+Built with Fredrin in 5 tickets in under an hour, two of them in parallel. Plain HTML and CSS. Set in Schibsted Grotesk.
