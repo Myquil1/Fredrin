@@ -49,9 +49,78 @@
     </section>
     <section id="work"></section>
     <section id="principles"></section>
-    <section id="notes"></section>
-    <section id="contact"></section>
-    <section id="colophon"></section>
+    <section id="notes">
+      <h2>Notes from building this page in Fredrin</h2>
+      <p class="notes-intro">I built this page in Fredrin on [DATE] as a first-time user. Here is what I noticed.</p>
+      <div class="notes-grid">
+        <div class="note">
+          <h3 class="note-title">What worked</h3>
+          <p>[One thing that worked well, and why it worked]</p>
+        </div>
+        <div class="note">
+          <h3 class="note-title">Quick win 1</h3>
+          <dl class="note-lines">
+            <dt class="mono">What I saw.</dt>
+            <dd>[ ]</dd>
+            <dt class="mono">Why it matters.</dt>
+            <dd>[ ]</dd>
+            <dt class="mono">What I'd try.</dt>
+            <dd>[ ]</dd>
+          </dl>
+        </div>
+        <div class="note">
+          <h3 class="note-title">Quick win 2</h3>
+          <dl class="note-lines">
+            <dt class="mono">What I saw.</dt>
+            <dd>[ ]</dd>
+            <dt class="mono">Why it matters.</dt>
+            <dd>[ ]</dd>
+            <dt class="mono">What I'd try.</dt>
+            <dd>[ ]</dd>
+          </dl>
+        </div>
+        <div class="note">
+          <h3 class="note-title">One observation</h3>
+          <p>[A pattern across the whole session, two or three sentences]</p>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Reach me</h2>
+      <p class="contact-line">Available for remote product design roles. Email is fastest.</p>
+      <div class="contact-email">
+        <button type="button" class="copy-btn" data-email="hello@michaelawilson.co">hello@michaelawilson.co</button>
+        <a href="mailto:hello@michaelawilson.co">Email</a>
+        <span class="visually-hidden" role="status" aria-live="polite" id="copy-status"></span>
+      </div>
+      <ul class="contact-links">
+        <li><a href="https://www.linkedin.com/in/michaelawilson-">LinkedIn</a></li>
+        <li><a href="https://michaelawilson.co">Portfolio</a></li>
+        <li><a href="https://michaelawilson.co/michael_wilson_resume.pdf">Resume</a></li>
+      </ul>
+    </section>
+    <section id="colophon">
+      <p class="colophon-line">Built with Fredrin in [N] tickets over [N] hours, two of them in parallel. Plain HTML and CSS. Set in Schibsted Grotesk.</p>
+    </section>
   </main>
+  <script>
+    (function () {
+      var btn = document.querySelector('.copy-btn');
+      var status = document.getElementById('copy-status');
+      if (!btn || !navigator.clipboard) return;
+      var original = btn.textContent, timer;
+      btn.addEventListener('click', function () {
+        navigator.clipboard.writeText(btn.dataset.email).then(function () {
+          btn.textContent = 'Copied';
+          status.textContent = 'Email address copied';
+          clearTimeout(timer);
+          timer = setTimeout(function () {
+            btn.textContent = original;
+            status.textContent = '';
+          }, 2000);
+        }, function () {});
+      });
+    })();
+  </script>
 </body>
 </html>

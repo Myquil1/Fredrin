@@ -1,0 +1,11 @@
+#colophon {
+  padding-top: 0;
+}
+
+.colophon-line {
+  font-family: var(--font-mono);
+  font-size: var(--fs-13);
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  padding-top: var(--sp-16);
+}
