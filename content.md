@@ -23,7 +23,7 @@ Every word on the page comes from this file. Use it verbatim.
 | Number | Label |
 | --- | --- |
 | +10 to 20 pts | Drive classification rate at MileIQ, after one reviewable list |
-| 0 of 5 → 5 of 5 | First-try success on a table action, after one usability test |
+| 0 of 5 → 5 of 5 | Success on the first try for a table action, after one usability test |
 | 45 → 10 min | Design handoff time at fromAtoB, after one governed system |
 
 ## Work
@@ -44,7 +44,7 @@ Section heading on the page is **What I've shipped**.
 
 - Label. A-D Global, usability testing
 - Title. Visible beats clean
-- Body. Account managers worked in one data table all day. I was sure that hiding row actions until hover would clean it up. I tested it with five power users and none of them found the action on the first try. One decided the feature had been removed. I shipped a persistent actions column with a three-dot menu on every row, and everyone in the next round got it on the first try.
+- Body. Account managers worked in one data table all day. I was sure that hiding row actions until hover would clean it up. I tested it with five power users and none of them found the action on the first try. One decided the feature had been removed. I shipped a persistent actions column with a three dot menu on every row, and everyone in the next round got it on the first try.
 - Result. Across the portal launch, median time on a core flow fell 21 percent and advanced reporting adoption rose 27 percent
 - Why it's here. The closest thing in my work to a Fredrin board. A dense screen people keep open all day.
 - Link text. Read the case study
@@ -80,9 +80,9 @@ Section heading on the page is **Notes from building this page in Fredrin**.
 
 | Element | Copy |
 | --- | --- |
-| Intro | I built this page in Fredrin on November 25, 2026 as a first-time user. Here is what I noticed. |
+| Intro | I built this page in Fredrin on November 25, 2026, my first time using it. Here is what I noticed. |
 | What worked | Conflicts. Two tickets ran at once and both edited the same part of index.html. The second ticket said Conflicts with main, paused its auto merge, and gave me one button, Fix Conflict. About a minute later it was merged. I never opened a terminal. |
-| Quick win 1 | What I saw. Fredrin rewrote my ticket when I created it. The title changed, my section labels changed, and the Activity tab logged the description going from 10,270 characters to 9,663. Why it matters. My brief said to save a block of copy character for character. I couldn't tell what the Worker actually received, so I compared the committed file against my own copy to be sure. What I'd try. Keep the original one click away. A toggle next to the AI-generated label that switches between what I typed and what the Worker got. |
+| Quick win 1 | What I saw. Fredrin rewrote my ticket when I created it. The title changed, my section labels changed, and the Activity tab logged the description going from 10,270 characters to 9,663. Why it matters. My brief said to save a block of copy character for character. I couldn't tell what the Worker actually received, so I compared the committed file against my own copy to be sure. What I'd try. Keep the original one click away. A toggle on the ticket summary that switches between what I typed and what the Worker got. |
 | Quick win 2 | What I saw. With two tickets running, both cards on the board showed a title and a timestamp. The plan checklist and its count only show after you open the ticket. Why it matters. The brief for this role is to make twenty agents feel as calm as one. I can't open twenty tickets to see which one is stuck. What I'd try. Put the checklist count and the current step on the card, so the board answers how far along a ticket is without a click. |
 | One observation | The board tells me a ticket's state, and the reason for that state usually sits one level down. A ticket sat under Needs attention while its panel said it would merge itself. A finished run ended its terminal preview with a heartbeat rejected line that read like a failure. I'd bring the reason and the next step up next to the status. |
 | Redesign image, optional | None |
@@ -101,4 +101,4 @@ Section heading on the page is **Reach me**.
 
 ## Colophon
 
-Built with Fredrin in 5 tickets in under an hour, two of them in parallel. Plain HTML and CSS. Set in Schibsted Grotesk.
+Built with Fredrin in 6 tickets over one afternoon, two of them in parallel. Plain HTML and CSS. Set in Schibsted Grotesk.
